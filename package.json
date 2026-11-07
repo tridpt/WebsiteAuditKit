@@ -1,0 +1,52 @@
+{
+  "name": "website-audit-kit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Kiểm tra tốc độ, mobile, liên kết và SEO của website. Chạy cục bộ, báo cáo rõ ràng, việc cần sửa có ưu tiên.",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "tsc -b && vite build",
+    "start": "node server/index.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:e2e": "node scripts/verify.mjs",
+    "test:monitors": "node scripts/verify-monitors.mjs",
+    "test:branding": "node scripts/verify-branding.mjs",
+    "test:projects": "node scripts/verify-projects.mjs",
+    "test:batches": "node scripts/verify-batches.mjs",
+    "test:batches:real": "node scripts/verify-batches.mjs --real",
+    "test:batch-comparison": "node scripts/verify-batch-comparison.mjs",
+    "test:batch-comparison:real": "node scripts/verify-batch-comparison.mjs --real",
+    "test:project-schedules": "node scripts/verify-project-schedules.mjs",
+    "test:project-schedules:real": "node scripts/verify-project-schedules.mjs --real"
+  },
+  "dependencies": {
+    "@fontsource/be-vietnam-pro": "^5.2.6",
+    "cheerio": "^1.1.2",
+    "express": "^5.1.0",
+    "ipaddr.js": "^2.2.0",
+    "lighthouse": "^12.8.2",
+    "lucide-react": "^0.468.0",
+    "playwright": "^1.56.1",
+    "puppeteer-core": "^24.43.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "undici": "^6.21.3"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^4.7.0",
+    "prettier": "^3.9.10",
+    "typescript": "~5.9.3",
+    "vite": "^6.4.1"
+  },
+  "overrides": {
+    "@sentry/node": "^10.54.0",
+    "basic-ftp": "^6.2.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
